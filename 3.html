@@ -1,0 +1,26 @@
+<!DOCTYPE html><head></head><body><script>
+
+
+
+var prime = 600851475143;
+
+for (i = Math.sqrt(prime).toFixed(0); i >= 2; i--) {
+	if (prime % i == 0) {
+		var isPrime = true;
+		var j = Math.sqrt(i).toFixed(0);
+		while (isPrime && j >= 2) {
+			if(i % j == 0) {
+				isPrime = false;
+			}
+			j--;
+		}
+		if (isPrime) {
+			alert(i);
+			break;
+		}
+	}
+}
+
+
+
+</script></body>

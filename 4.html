@@ -1,0 +1,38 @@
+<!DOCTYPE html><head></head><body><script>
+
+
+
+var bigPalindrom = -1;
+
+for (i = 999; i >= 100; i--) {
+	for (j = i; j >= 100; j--) {
+		//Check if product is bigger than bigPalindrom
+		if (i * j > bigPalindrom) {
+			//Check if product is Palindrom
+			var num = i * j + '';
+			var isPalindrom = true;
+			var k = 0;
+			while (k <= (num.length / 2) && isPalindrom) {
+				if (num.charAt(k) != num.charAt(num.length - 1 - k)) {
+					isPalindrom = false;
+				}
+				k++;
+			}
+			if (isPalindrom) {
+				bigPalindrom = i * j;
+				j = 0;
+			}
+		}
+		else if (i == j){
+			alert(bigPalindrom);
+			break;
+		}
+		else {
+			j = 0;
+		}
+	}
+}
+
+
+
+</script></body>

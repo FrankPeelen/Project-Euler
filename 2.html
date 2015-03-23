@@ -1,0 +1,22 @@
+<!DOCTYPE html><head></head><body><script>
+
+
+
+var sum = 0;
+var prev = 1;
+var i = 2;
+
+while (i < 4000000) {
+	var curr = i;
+	if (curr % 2 == 0) {
+		sum += curr;
+	}
+	i += prev;
+	prev = curr;
+}
+
+alert(sum);
+
+
+
+</script></body>

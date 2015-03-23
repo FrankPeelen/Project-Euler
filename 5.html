@@ -1,0 +1,22 @@
+<!DOCTYPE html><head></head><body><script>
+
+
+
+for (i = 20 * 19; i <= 1000000000; i++) {
+	var div_by_all = true;
+	j = 20;
+	while (j >= 1 && div_by_all) {
+		if (i % j != 0) {
+			div_by_all = false;
+		}
+		j--;
+	}
+	if (div_by_all) {
+		alert(i);
+		break;
+	}
+}
+
+
+
+</script></body>
