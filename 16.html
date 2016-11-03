@@ -1,0 +1,14 @@
+<!DOCTYPE html><head></head><body><script>
+
+var result = 0;
+var subresult = Math.pow(2, 1000);
+subresult = String(subresult);
+
+for(i = 0; i < subresult.length; i++) {
+	var num = subresult.charAt(i);
+	result += Number(num);
+};
+
+console.log(result);
+
+</script></body>

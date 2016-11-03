@@ -1,0 +1,37 @@
+<!DOCTYPE html><head></head><body><script>
+
+var count = 0;
+var triangle = 0;
+var factors = 0;
+var factors = function(tria) {
+	var tot = 2;
+	var num = 0;
+	var sqr = Math.sqrt(tria);
+	if (Number.isInteger(sqr)) {
+		tot++;
+		sqr--;
+	} else {
+		sqr = Math.ceil(sqr);
+	}
+	for (i = 2; i <= sqr; i++) {
+		if ((tria % i) === 0) {
+			num++;
+		};
+	}; 
+	return num*2 + tot;
+}
+
+while (true) {
+	count++;
+	for (i = 1; i <= count; i++) {
+		triangle += i;
+	};
+	if (factors(triangle) > 500) {
+		break;
+	};
+	triangle = 0;
+};
+
+alert(triangle);
+
+</script></body>

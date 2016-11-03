@@ -1,0 +1,28 @@
+<!DOCTYPE html><head></head><body><script>
+
+var resultcount = 0;
+var result = 0;
+
+for(i = 1; i < 1000000; i++) {
+	var counter = 0;
+	var j = i;
+
+	while(j != 1) {
+		if(j % 2 == 0) {
+			j = j / 2;
+		} else {
+			j = 3 * j + 1;
+		};
+
+		counter ++;
+	};
+
+	if(counter > resultcount){
+		result = i;
+		resultcount = counter;
+	};
+};
+
+console.log(result);
+
+</script></body>
